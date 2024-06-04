@@ -1,0 +1,19 @@
+# Code for Handling Errors
+# Author: Christine du Preez
+# Date: 29 May 2024
+# Version: 1.0
+
+# Code testing that a valid number is entered (V1)
+done = False # Boolean variables set to False
+while not done: # While loop runs until valid number is entered
+    print("Please enter your value: ") # Ask user for a  number
+    try: # Try for a valid input
+        num = float(input()) # Storing user input to number variable
+        done = True # If user enters valid number, the while loop will break (stop) and the program wil continue
+    except ValueError: # if user enters a string, restart the loop. 
+        print("That is not a valid number.") # error message to 
+        continue
+
+print ("The number you entered is ",num) # Old print print formatting
+print ("The number you entered is {}". format,{num})
+print(f"The number you entered is {num}") # New way
