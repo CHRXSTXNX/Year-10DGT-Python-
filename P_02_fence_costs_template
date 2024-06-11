@@ -25,34 +25,39 @@ def number_check(question):
         except ValueError: 
             print(error)
 
-# Get input (aks user for width, length and cost per metre)
+# Main Routine starts here
+keep_going = ""
+while keep_going == "":
 
-width = number_check("Please enter the width of your fence (in meters):\n")
+    # Get input (aks user for width, length and cost per metre)
 
-print(f"The width you entered is {width}m\n") 
+    width = number_check("Please enter the width of your fence (in meters):\n")
 
-length = number_check("Please enter the length of your given fence (in meters):\n")
+    print(f"The width you entered is {width}m\n") 
 
-print(f"The length you entered is {length}m\n") 
+    length = number_check("Please enter the length of your given fence (in meters):\n")
 
-cost_per_meter = number_check("Please enter the cost per meter of your fence material: \n$")
+    print(f"The length you entered is {length}m\n") 
 
-print(f"The cost per metre of your fence is ${cost_per_meter}/m\n") 
+    cost_per_meter = number_check("Please enter the cost per meter of your fence material: \n$")
 
-# Calculate perimeter: 2x (width + length)
+    print(f"The cost per metre of your fence is ${cost_per_meter}/m\n") 
 
-perimeter = 2 * (width + length)
-print(f"The perimeter of your fence in metres is {perimeter}m")
+    # Calculate perimeter: 2x (width + length)
 
-# Calculate the cost of fencing (perimeter x cost / m)
+    perimeter = 2 * (width + length)
+    print(f"The perimeter of your fence in metres is {perimeter}m")
 
-cost_of_fencing = (perimeter * cost_per_meter) 
-print(f"The perimeter of your fence in metres is {perimeter}m and the cost to build it will be ${cost_of_fencing}\n")
+    # Calculate the cost of fencing (perimeter x cost / m)
 
-# Ask the user if they wish to do another calculation (<enter> to loop, any key to quit)
+    cost_of_fencing = (perimeter * cost_per_meter) 
+    print(f"The perimeter of your fence in metres is {perimeter}m and the cost to build it will be ${cost_of_fencing}\n")
 
-keep_going = input("Press enter if you would like to do another calculation or any other key to quit.\n")
-print()
+    # Ask the user if they wish to do another calculation (<enter> to loop, any key to quit)
+
+    keep_going = input("Press enter if you would like to do another calculation or any other key to quit.\n")
+    print()
+
 
 print("Thank you for using this fence cost calculator\n")
-print("Have a great day 🤗")
+print("Have a great day 🤗") 
